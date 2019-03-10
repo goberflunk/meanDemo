@@ -14,3 +14,5 @@ Resources:
             Subnets: ["subnet-037668297a8e1aa36", "subnet-0057fcb76fd91bbcf"]
             SecurityGroups: ["sg-001d35d09f1dc05f8"]
             AssignPublicIp: "DISABLED"
+Hooks:
+  - AfterAllowTestTraffic: "test_angular"
