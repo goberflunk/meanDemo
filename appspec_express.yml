@@ -1,0 +1,16 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/dev-test-express:4"
+        LoadBalancerInfo:
+          ContainerName: "dev-test-express"
+          ContainerPort: 3000
+# Optional properties
+        PlatformVersion: "LATEST"
+        NetworkConfiguration:
+          AwsvpcConfiguration:
+            Subnets: ["subnet-037668297a8e1aa36", "subnet-0057fcb76fd91bbcf"]
+            SecurityGroups: ["sg-001d35d09f1dc05f8"]
+            AssignPublicIp: "DISABLED"
