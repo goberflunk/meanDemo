@@ -63,7 +63,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-west-2:078563635295:task-definition/dev_test_angular:7",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:078563635295:task-definition/dev-test-angular:7",
   "family": "dev_test_angular",
   "requiresAttributes": [
     {
