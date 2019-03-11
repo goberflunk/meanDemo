@@ -39,7 +39,7 @@
       "memory": null,
       "memoryReservation": null,
       "volumesFrom": [],
-      "image": "078563635295.dkr.ecr.us-west-2.amazonaws.com/dev_test_angular",
+      "image": "078563635295.dkr.ecr.us-west-2.amazonaws.com/dev_test_angular:latest",
       "disableNetworking": null,
       "interactive": null,
       "healthCheck": null,
@@ -63,7 +63,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-west-2:078563635295:task-definition/dev-test-angular:3",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:078563635295:task-definition/dev-test-angular:7",
   "family": "dev-test-angular",
   "requiresAttributes": [
     {
@@ -115,7 +115,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "512",
-  "revision": 3,
+  "revision": 7,
   "status": "ACTIVE",
   "volumes": []
 }
