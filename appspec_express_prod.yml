@@ -1,0 +1,16 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/prod-express:1"
+        LoadBalancerInfo:
+          ContainerName: "prod-express"
+          ContainerPort: 3000
+# Optional properties
+        PlatformVersion: "LATEST"
+        NetworkConfiguration:
+          AwsvpcConfiguration:
+            Subnets: ["subnet-007801325823e5f90", "subnet-0e5ff141c8a9664e5"]
+            SecurityGroups: ["sg-01864ad829c825388"]
+            AssignPublicIp: "DISABLED"

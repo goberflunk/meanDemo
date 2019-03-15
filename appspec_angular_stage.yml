@@ -3,16 +3,14 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/dev-test-angular:8"
+        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/stage-angular:1"
         LoadBalancerInfo:
-          ContainerName: "angular"
+          ContainerName: "stage-angular"
           ContainerPort: 4200
 # Optional properties
         PlatformVersion: "LATEST"
         NetworkConfiguration:
           AwsvpcConfiguration:
             Subnets: ["subnet-037668297a8e1aa36", "subnet-0057fcb76fd91bbcf"]
-            SecurityGroups: ["sg-042e8d1cebc77781d"]
+            SecurityGroups: ["sg-08692e5b6aec928fb"]
             AssignPublicIp: "DISABLED"
-Hooks:
-  - AfterAllowTestTraffic: "angular_runtests"

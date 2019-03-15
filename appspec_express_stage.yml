@@ -3,16 +3,14 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/dev-test-express:4"
+        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/stage-express:1"
         LoadBalancerInfo:
-          ContainerName: "dev-test-express"
+          ContainerName: "stage-express"
           ContainerPort: 3000
 # Optional properties
         PlatformVersion: "LATEST"
         NetworkConfiguration:
           AwsvpcConfiguration:
             Subnets: ["subnet-037668297a8e1aa36", "subnet-0057fcb76fd91bbcf"]
-            SecurityGroups: ["sg-001d35d09f1dc05f8"]
+            SecurityGroups: ["sg-0fb64b01ca06c19e6"]
             AssignPublicIp: "DISABLED"
-Hooks:
-  - AfterAllowTestTraffic: "express_runtests"

@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - cd angular-client
+      - sed 's/ENVIRONMENT/qa/g' package_test.json > package.json
+      - docker build -t 078563635295.dkr.ecr.us-west-2.amazonaws.com/qa-angular:latest .
+      - cd ../express-server
+      - docker build -t 078563635295.dkr.ecr.us-west-2.amazonaws.com/qa-express:latest .
+      - cd ..
+  post_build:
+    commands:
+      - $(aws ecr get-login --no-include-email)
+      - docker push 078563635295.dkr.ecr.us-west-2.amazonaws.com/qa-angular:latest
+      - docker push 078563635295.dkr.ecr.us-west-2.amazonaws.com/qa-express:latest
+artifacts:
+  files:
+     - appspec_express_qa.yml
+     - taskdef_express_qa.json
+     - appspec_angular_qa.yml
+     - taskdef_angular_qa.json
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths

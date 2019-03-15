@@ -1,6 +1,6 @@
 export const environment = {
-  production: false,
+  name: "local",
   settings: {
-    gateway: ""
+    gateway: "localhost:3000"
   }
 };

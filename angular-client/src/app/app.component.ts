@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../environments/environment';
 import { Http } from '@angular/http';
 
 // Import rxjs map operator
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
   title = 'app works!';
 
   // Link to our api, pointing to localhost
-  API = 'http://dev-test-express-ee4481718bf0920f.elb.us-west-2.amazonaws.com';
+  API = 'http://' + environment.settings.gateway;
 
   // Declare empty list of people
   people: any[] = [];

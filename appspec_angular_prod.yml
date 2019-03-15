@@ -1,0 +1,16 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/prod-angular:1"
+        LoadBalancerInfo:
+          ContainerName: "prod-angular"
+          ContainerPort: 4200
+# Optional properties
+        PlatformVersion: "LATEST"
+        NetworkConfiguration:
+          AwsvpcConfiguration:
+            Subnets: ["subnet-007801325823e5f90", "subnet-0e5ff141c8a9664e5"]
+            SecurityGroups: ["sg-04be49f361bee281c"]
+            AssignPublicIp: "DISABLED"

@@ -7,7 +7,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/dev-test-angular",
+          "awslogs-group": "/ecs/qa-angular",
           "awslogs-region": "us-west-2",
           "awslogs-stream-prefix": "ecs"
         }
@@ -23,12 +23,7 @@
       "command": null,
       "linuxParameters": null,
       "cpu": 0,
-      "environment": [
-        {
-          "name": "EXPRESS",
-          "value": "http://dev-test-express-ee4481718bf0920f.elb.us-west-2.amazonaws.com"
-        }
-      ],
+      "environment": [],
       "resourceRequirements": null,
       "ulimits": null,
       "dnsServers": null,
@@ -39,7 +34,7 @@
       "memory": null,
       "memoryReservation": null,
       "volumesFrom": [],
-      "image": "078563635295.dkr.ecr.us-west-2.amazonaws.com/dev_test_angular:latest",
+      "image": "078563635295.dkr.ecr.us-west-2.amazonaws.com/qa-angular:latest",
       "disableNetworking": null,
       "interactive": null,
       "healthCheck": null,
@@ -63,8 +58,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-west-2:078563635295:task-definition/dev-test-angular:7",
-  "family": "dev_test_angular",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:078563635295:task-definition/qa-angular:1",
+  "family": "qa-angular",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -115,7 +110,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "512",
-  "revision": 7,
+  "revision": 1,
   "status": "ACTIVE",
   "volumes": []
 }
