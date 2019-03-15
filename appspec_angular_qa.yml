@@ -5,7 +5,7 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/qa-angular:1"
         LoadBalancerInfo:
-          ContainerName: "qa-angular"
+          ContainerName: "angular"
           ContainerPort: 4200
 # Optional properties
         PlatformVersion: "LATEST"

@@ -39,7 +39,7 @@
       "memory": null,
       "memoryReservation": null,
       "volumesFrom": [],
-      "image": "078563635295.dkr.ecr.us-west-2.amazonaws.com/qa-express",
+      "image": "078563635295.dkr.ecr.us-west-2.amazonaws.com/qa-express:latest",
       "disableNetworking": null,
       "interactive": null,
       "healthCheck": null,

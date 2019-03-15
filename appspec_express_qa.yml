@@ -3,9 +3,9 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/qa-express:1"
+        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/qa-express:3"
         LoadBalancerInfo:
-          ContainerName: "qa-express"
+          ContainerName: "express"
           ContainerPort: 3000
 # Optional properties
         PlatformVersion: "LATEST"

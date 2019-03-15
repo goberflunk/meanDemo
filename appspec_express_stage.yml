@@ -5,7 +5,7 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/stage-express:1"
         LoadBalancerInfo:
-          ContainerName: "stage-express"
+          ContainerName: "express"
           ContainerPort: 3000
 # Optional properties
         PlatformVersion: "LATEST"
