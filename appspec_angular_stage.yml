@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/stage-angular:1"
+        TaskDefinition: "arn:aws:ecs:us-west-2:078563635295:task-definition/stage-angular:2"
         LoadBalancerInfo:
           ContainerName: "angular"
           ContainerPort: 4200
