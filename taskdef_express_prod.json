@@ -7,7 +7,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/dev-test-express",
+          "awslogs-group": "/ecs/prod-express",
           "awslogs-region": "us-west-2",
           "awslogs-stream-prefix": "ecs"
         }
@@ -26,7 +26,7 @@
       "environment": [
         {
           "name": "MONGO",
-          "value": "10.192.21.202:27017"
+          "value": "admin:lkju5467@10.200.20.187:27017"
         }
       ],
       "resourceRequirements": null,
@@ -39,7 +39,7 @@
       "memory": null,
       "memoryReservation": null,
       "volumesFrom": [],
-      "image": "078563635295.dkr.ecr.us-west-2.amazonaws.com/dev_test_express:latest",
+      "image": "078563635295.dkr.ecr.us-west-2.amazonaws.com/prod-express:latest",
       "disableNetworking": null,
       "interactive": null,
       "healthCheck": null,
@@ -53,18 +53,18 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "dev-test-express"
+      "name": "express"
     }
   ],
   "placementConstraints": [],
   "memory": "512",
-  "taskRoleArn": "arn:aws:iam::078563635295:role/ecsTaskExecutionRole",
+  "taskRoleArn": null,
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-west-2:078563635295:task-definition/dev-test-express:3",
-  "family": "dev-test-express",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:078563635295:task-definition/prod-express:3",
+  "family": "prod-express",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -89,12 +89,6 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
     },
     {
       "targetId": null,
