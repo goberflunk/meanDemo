@@ -4,7 +4,7 @@ phases:
   build:
     commands:
       - cd angular-client
-      - sed 's/ENVIRONMENT/qa/g' package_test.json > package.json
+      - sed 's/ENVIRONMENT/prod/g' package_test.json > package.json
       - docker build -t 078563635295.dkr.ecr.us-west-2.amazonaws.com/prod-angular:latest .
       - cd ../express-server
       - docker build -t 078563635295.dkr.ecr.us-west-2.amazonaws.com/prod-express:latest .
